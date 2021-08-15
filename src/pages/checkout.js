@@ -14,6 +14,9 @@ function checkout() {
                         height={250}
                         objectFit="contain"
                     />
+                    <div className="flex flex-col p-5 space-y-10 bg-white">
+                        <h1 className="text-3xl border-b pb-4">Your Shopping cart</h1>
+                    </div>
                 </div>
             </main>
         </div>
