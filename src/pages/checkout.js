@@ -22,7 +22,16 @@ function checkout() {
                     />
                     <div className="flex flex-col p-5 space-y-10 bg-white">
                         <h1 className="text-3xl border-b pb-4">{items.length === 0 ? 'Your Amazon Basket' : 'Shopping Basket'}</h1>
-                        {items.map((item, i) => (<checkoutProduct />))}
+                        {items.map((item, i) => (<checkoutProduct 
+                         key={item.id}
+                         id={item.id}
+                         quantity={item.quantity}
+                         title={item.title}
+                         image={item.image}
+                         rating={item.rating}
+                         description={item.description}
+                         hasPrime={item.hasPrime}
+                         price={item.price} />))}
                     </div>
                 </div>
             </main>

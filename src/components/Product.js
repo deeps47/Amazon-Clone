@@ -7,7 +7,7 @@ import { useDispatch } from "react-redux"
 const MAX_RATING = 5
 const MIN_RATING = 1
 
-const Product = ({id, image, price, title, category, description}) => {
+const Product = ({id, image, price, title, category, description, category, image, hasPrime}) => {
     const dispatch = useDispatch();
 
     const [rating] = useState(Math.floor(Math.random() * (MAX_RATING - MIN_RATING + 1) + MIN_RATING))
