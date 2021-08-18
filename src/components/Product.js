@@ -3,11 +3,13 @@ import { useState } from "react"
 import { StarIcon } from "@heroicons/react/solid"
 import Currency from "react-currency-formatter"
 import { useDispatch } from "react-redux"
+import { addToBasket } from "../slices/basketSlice"
+import ProductFeed from "./ProductFeed"
 
 const MAX_RATING = 5
 const MIN_RATING = 1
 
-const Product = ({id, image, price, title, category, description, category, image, hasPrime}) => {
+const Product = ({id, image, price, title, description, category,}) => {
     const dispatch = useDispatch();
 
     const [rating] = useState(Math.floor(Math.random() * (MAX_RATING - MIN_RATING + 1) + MIN_RATING))
@@ -17,7 +19,7 @@ const Product = ({id, image, price, title, category, description, category, imag
     const addItemToBasket = () => {
         const Product = {id, image, price, title, category, description}
 
-        dispatch(addToBasket(product))
+        dispatch(addToBasket(Product))
     }
 
     return (

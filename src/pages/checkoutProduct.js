@@ -1,4 +1,8 @@
-function checkoutProduct({id, quantity, title, price, rating, description, image, hasPrime}) {
+import { StarIcon } from "@heroicons/react/solid"
+import Image from "next/image"
+import Currency from "react-currency-formatter"
+
+function CheckoutProduct({id, quantity, title, price, rating, description, image, hasPrime}) {
     return (
         <div className="flex flex-col xl:grid grid-cols-5 my-auto">
             <Image src={image} height={200} width={200} objectFit="contain" />
@@ -25,4 +29,4 @@ function checkoutProduct({id, quantity, title, price, rating, description, image
     )
 }
 
-export default checkoutProduct
+export default CheckoutProduct
